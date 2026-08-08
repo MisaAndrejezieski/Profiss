@@ -9,61 +9,79 @@
     android:padding="24dp"
     tools:context=".MainActivity">
 
-    <!-- Título Profiss -->
-    <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+    <!-- Cabeçalho superior (Logo e Frase) -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Profiss"
-        android:textColor="#FFFFFF"
-        android:textSize="52sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <!-- Subtítulo -->
-    <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:orientation="vertical"
         android:gravity="center"
-        android:text="Encontro entre profissionais qualificados e clientes satisfeitos."
-        android:textColor="#090909"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/container_botoes"
+        app:layout_constraintVertical_bias="0.4">
 
-    <!-- Botão Entrar (Fundo Branco, Texto Azul Escuro) -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
+        <!-- Ícone de escudo para dar identidade -->
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@android:drawable/ic_secure"
+            app:tint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_profiss"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:paddingHorizontal="16dp"
+            android:text="@string/subtitle_profiss"
+            android:textColor="#D0D0D0"
+            android:textSize="16sp"
+            android:lineSpacingExtra="4dp" />
+    </LinearLayout>
+
+    <!-- Botões presos no final da tela -->
+    <LinearLayout
+        android:id="@+id/container_botoes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:text="Entrar"
-        android:textColor="#2C3E50"
-        android:textSize="16sp"
-        app:backgroundTint="#FFFFFF"
-        app:cornerRadius="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
 
-    <!-- Botão Criar Conta (Transparente com Borda Branca) -->
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Criar Conta"
-        android:textColor="#FFFFFF"
-        android:textSize="16sp"
-        app:backgroundTint="@android:color/transparent"
-        app:strokeColor="#FFFFFF"
-        app:strokeWidth="2dp"
-        app:cornerRadius="8dp"
-        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_login"
+            android:textColor="#2C3E50"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="#FFFFFF"
+            app:cornerRadius="8dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/btn_register"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:backgroundTint="@android:color/transparent"
+            app:strokeColor="#FFFFFF"
+            app:strokeWidth="2dp"
+            app:cornerRadius="8dp" />
+
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
