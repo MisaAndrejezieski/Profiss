@@ -1,42 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:background="#F0F2F5"
-android:padding="20dp">
+package com.example.profiss
 
-<TextView
-android:id="@+id/tvWelcome"
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Bem-vindo ao Profiss!"
-android:textColor="#1A252F"
-android:textSize="28sp"
-android:textStyle="bold"
-app:layout_constraintTop_toTopOf="parent"
-app:layout_constraintStart_toStartOf="parent"
-android:layout_marginTop="40dp"/>
+import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 
-<TextView
-android:layout_width="wrap_content"
-android:layout_height="wrap_content"
-android:text="Você está dentro do sistema."
-android:textColor="#7F8C8D"
-android:textSize="16sp"
-android:layout_marginTop="8dp"
-app:layout_constraintTop_toBottomOf="@+id/tvWelcome"
-app:layout_constraintStart_toStartOf="parent"/>
+class DashboardActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_dashboard)
 
-<Button
-android:id="@+id/btnLogout"
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:text="Sair do App"
-android:textColor="#FFFFFF"
-android:backgroundTint="#E74C3C"
-app:layout_constraintBottom_toBottomOf="parent"
-android:layout_marginBottom="20dp"/>
+        // Agora o Android Studio vai achar o btnLogout, porque o XML foi corrigido
+        val btnLogout = findViewById<Button>(R.id.btnLogout)
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        btnLogout.setOnClickListener {
+            Toast.makeText(this, "Saindo do app...", Toast.LENGTH_SHORT).show()
+            finish() // Fecha a tela e volta para o celular
+        }
+    }
+}
