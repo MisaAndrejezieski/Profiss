@@ -9,17 +9,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Ligando os botões do layout ao código
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
 
-        // Exemplo de ação ao clicar (vamos usar isso no futuro)
         btnLogin.setOnClickListener {
-            // Aqui vai o código para abrir a tela de Login
+            // Futura tela de login
         }
 
         btnRegister.setOnClickListener {
-            // Aqui vai o código para abrir a tela de Cadastro
+            // Futura tela de cadastro
         }
     }
 }
