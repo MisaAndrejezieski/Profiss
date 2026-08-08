@@ -1,5 +1,7 @@
 <resources>
     <style name="Theme.Profiss" parent="Theme.Material3.DayNight.NoActionBar">
-        <item name="colorPrimary">#3498DB</item>
+        <item name="colorPrimary">@color/blue_primary</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 </resources>

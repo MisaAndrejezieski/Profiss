@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Profiss</string>
+    <string name="welcome_title">Profiss</string>
+    <string name="welcome_subtitle">Gerencie sua carreira e objetivos profissionais em um só lugar.</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_register">Criar Conta</string>
 </resources>
