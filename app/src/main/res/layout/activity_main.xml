@@ -5,24 +5,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/white"
+    android:background="@color/white"
     android:padding="24dp"
     tools:context=".MainActivity">
 
-    <!-- Título com o nome do App -->
+    <!-- FUNDO COM GRADIENTE (Vai cobrir tudo) -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Título Profiss -->
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Profiss"
-        android:textColor="#2C3E50"
-        android:textSize="48sp"
+        android:textColor="@color/white"
+        android:textSize="56sp"
         android:textStyle="bold"
+        android:elevation="4dp"
         app:layout_constraintBottom_toTopOf="@+id/tvSubtitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.3" />
+        app:layout_constraintVertical_bias="0.35" />
 
     <!-- Subtítulo -->
     <TextView
@@ -32,25 +43,26 @@
         android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="Gerencie sua carreira e objetivos profissionais em um só lugar."
-        android:textColor="#7F8C8D"
+        android:textColor="#E0E0E0"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvTitle" />
 
-    <!-- Botão "Entrar" -->
+    <!-- Botão Entrar (Agora com cor de destaque sobre o fundo azul) -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="56dp"
         android:text="Entrar"
         android:textSize="16sp"
-        app:backgroundTint="#3498DB"
+        android:textColor="#2C3E50"
+        app:backgroundTint="@color/white"
         app:cornerRadius="8dp"
         app:layout_constraintTop_toBottomOf="@+id/tvSubtitle" />
 
-    <!-- Botão "Cadastrar-se" -->
+    <!-- Botão Cadastrar -->
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnRegister"
         android:layout_width="match_parent"
@@ -58,8 +70,9 @@
         android:layout_marginTop="12dp"
         android:text="Criar Conta"
         android:textSize="16sp"
+        android:textColor="@color/white"
         app:backgroundTint="@android:color/transparent"
-        app:strokeColor="#3498DB"
+        app:strokeColor="@color/white"
         app:strokeWidth="2dp"
         app:cornerRadius="8dp"
         app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
