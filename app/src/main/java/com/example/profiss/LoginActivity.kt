@@ -1,11 +1,11 @@
-package com.profiss.app // Mantenha o pacote do seu novo projeto aqui!
+package com.example.profiss
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.material.textfield.TextInputEditText
+import com.google.android.material.textfield.TextInputEditText // <--- O importante que faltava
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,8 +42,6 @@ class LoginActivity : AppCompatActivity() {
 
             // Se passou pelas validações, significa que o usuário digitou algo!
             Toast.makeText(this, "Login bem-sucedido! Bem-vindo, $email", Toast.LENGTH_LONG).show()
-
-            // (No futuro, aqui você vai colocar o código para ir para a Tela Principal)
         }
     }
 }
