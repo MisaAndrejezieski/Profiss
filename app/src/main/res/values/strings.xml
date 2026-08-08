@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Profiss</string>
+    <string name="title_profiss">Profiss</string>
+    <string name="subtitle_profiss">O ponto de encontro entre profissionais qualificados e clientes que buscam excelência.</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_register">Criar Conta</string>
+
     <string name="title_login">Entrar no Profiss</string>
     <string name="subtitle_login">Digite seus dados para acessar sua conta</string>
     <string name="hint_email">E-mail</string>

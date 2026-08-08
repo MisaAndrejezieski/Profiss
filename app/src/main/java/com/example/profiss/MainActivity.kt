@@ -1,5 +1,6 @@
 package com.example.profiss
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
@@ -13,7 +14,8 @@ class MainActivity : AppCompatActivity() {
         val btnRegister = findViewById<Button>(R.id.btnRegister)
 
         btnLogin.setOnClickListener {
-            // Futura tela de login
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
         }
 
         btnRegister.setOnClickListener {

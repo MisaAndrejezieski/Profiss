@@ -1,26 +1,49 @@
-package com.example.profiss
+package com.profiss.app // Mantenha o pacote do seu novo projeto aqui!
 
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputEditText
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        // Botão de Voltar
+        // 1. Botão de Voltar
         val btnBack = findViewById<ImageView>(R.id.btnBack)
         btnBack.setOnClickListener {
             finish()
         }
 
-        // Botão de Entrar (Agora a ação é apenas fechar a tela para testar)
+        // 2. Pegando os campos de texto
+        val etEmail = findViewById<TextInputEditText>(R.id.etEmail)
+        val etPassword = findViewById<TextInputEditText>(R.id.etPassword)
+
+        // 3. Botão de Entrar (Agora com validação!)
         val btnLoginAction = findViewById<Button>(R.id.btnLoginAction)
         btnLoginAction.setOnClickListener {
-            // Fecha a tela e volta para o início
-            finish()
+            // Pega o texto digitado e remove espaços em branco
+            val email = etEmail.text.toString().trim()
+            val password = etPassword.text.toString().trim()
+
+            // Se estiver vazio, avisa o usuário
+            if (email.isEmpty()) {
+                etEmail.error = "Digite seu e-mail"
+                return@setOnClickListener
+            }
+
+            if (password.isEmpty()) {
+                etPassword.error = "Digite sua senha"
+                return@setOnClickListener
+            }
+
+            // Se passou pelas validações, significa que o usuário digitou algo!
+            Toast.makeText(this, "Login bem-sucedido! Bem-vindo, $email", Toast.LENGTH_LONG).show()
+
+            // (No futuro, aqui você vai colocar o código para ir para a Tela Principal)
         }
     }
 }
